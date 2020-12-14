@@ -13,7 +13,7 @@ public class AndrasVasmaticsRPSPlayer extends RockPaperScissorsPlayer {
     public String showHand() {
         String[] possibleHands = new String[] {"rock", "paper", "scissors"};
         Random random = new Random(3);
-        return possibleHands[random.nextInt() - 1];
+        return possibleHands[random.nextInt()];
     }
 
     @Override
