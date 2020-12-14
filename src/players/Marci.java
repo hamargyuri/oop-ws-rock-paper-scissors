@@ -9,7 +9,7 @@ public class Marci extends RockPaperScissorsPlayer {
     @Override
     public String showHand() {
         String[] possibleHands = new String[] {"rock", "paper", "scissors"};
-        return possibleHands[0];
+        return possibleHands[1];
     }
 
     @Override
