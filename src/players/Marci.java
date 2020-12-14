@@ -3,16 +3,17 @@ package players;
 public class Marci extends RockPaperScissorsPlayer {
     @Override
     public Integer getLives() {
-        return null;
+        return this.lives;
     }
 
     @Override
     public String showHand() {
-        return null;
+        String[] possibleHands = new String[] {"rock", "paper", "scissors"};
+        return possibleHands[0];
     }
 
     @Override
     public void decreaseLives() {
-
+      this.lives--;
     }
 }
