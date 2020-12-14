@@ -8,7 +8,7 @@ public class SzabiRPSPlayer extends RockPaperScissorsPlayer {
     @Override
     public String showHand() {
         String[] rps = {"Rock", "Paper", "Scissors"};
-        return rps[(int)(Math.random() * 3) + 0];
+        return rps[(int)(Math.random() * 3)];
     }
 
     @Override
