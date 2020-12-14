@@ -14,11 +14,14 @@ public class AdamTeboldRPSPlayer extends RockPaperScissorsPlayer {
         Random random = new Random();
         int rps = random.nextInt(3);
 
-        return switch (rps) {
-            case 0 -> "rock";
-            case 1 -> "paper";
-            default -> "scissor";
-        };
+        switch (rps) {
+            case 0 :
+                return "rock";
+            case 1:
+                return "paper";
+            default:
+                return "scissor";
+        }
     }
 
     @Override
