@@ -14,4 +14,8 @@ public class Zemen extends RockPaperScissorsPlayer {
     public void decreaseLives() {
 		this.lives--;
 	}
+
+	public String getName() {
+    	return "Zsolt";
+	}
 }

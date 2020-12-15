@@ -1,19 +1,25 @@
-import players.AdamTeboldRPSPlayer;
-import players.RockPaperScissorsPlayer;
-import players.Zemen;
+import players.*;
 
 import java.util.Locale;
 
 public class RockPaperScissors {
     public static void main(String[] args) {
-        System.out.println("The winner is: " + play(new Zemen(), new AdamTeboldRPSPlayer()));
+        System.out.println("The winner is: " + play(new JanosRPSPlayer(), new Zoly()));
     }
 
     private static String play(RockPaperScissorsPlayer player1, RockPaperScissorsPlayer player2) {
-        if (player1.getLives() > 0 && player2.getLives() > 0) {
+        while (player1.getLives() > 0 && player2.getLives() > 0) {
             decideRound(player1, player2);
+
         }
-        return player1.getLives() > 0 ? player1.getName() : player2.getName();
+        if (player1.getLives() == 0) {
+            return player2.getName();
+        } else if (player2.getLives() == 0) {
+            return player1.getName();
+        } else {
+            return "Draw!";
+        }
+
 
     }
 
@@ -23,7 +29,7 @@ public class RockPaperScissors {
         if (hand1.equals(hand2)) {
             player1.decreaseLives();
             player2.decreaseLives();
-        } else if (hand1.equals("rock") && hand2.equals("paper") || hand1.equals("paper") && hand2.equals("scissors") || hand1.equals("scissors") && hand2.equals("rock")) {
+        } else if ((hand1.equals("rock") && hand2.equals("paper"))|| (hand1.equals("paper") && hand2.equals("scissors")) || (hand1.equals("scissors") && hand2.equals("rock"))) {
             player1.decreaseLives();
         } else {
             player2.decreaseLives();

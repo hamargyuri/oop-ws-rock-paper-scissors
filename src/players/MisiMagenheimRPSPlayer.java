@@ -2,9 +2,7 @@ package players;
 
 import java.util.Random;
 
-public class ZsofiSzakalRPSPlayer extends RockPaperScissorsPlayer {
-
-
+public class MisiMagenheimRPSPlayer extends RockPaperScissorsPlayer {
     @Override
     public Integer getLives() {
         return this.lives;
@@ -12,18 +10,18 @@ public class ZsofiSzakalRPSPlayer extends RockPaperScissorsPlayer {
 
     @Override
     public String showHand() {
-        String [] possibleHands =  new String[]{"rock", "paper", "scissors"};
+        String[]  possibleHands = new String[] {"rock", "paper", "scissors"};
         Random random = new Random(3);
-        return possibleHands[random.nextInt()];
+        return possibleHands[random.nextInt() -1];
     }
 
     @Override
     public void decreaseLives() {
-        this.lives--;
-
+    this.lives --;
     }
+
     @Override
     public String getName() {
-        return "Zsofi Szakal";
+        return "MisiMagenheim";
     }
 }

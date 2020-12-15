@@ -9,7 +9,7 @@ public class Zoly extends RockPaperScissorsPlayer {
 	String[] hands = {"rock", "paper", "scissors"};
 	@Override
 	public Integer getLives() {
-		return 3;
+		return lives;
 	}
 
 	@Override
@@ -20,6 +20,7 @@ public class Zoly extends RockPaperScissorsPlayer {
 
 	@Override
 	public void decreaseLives() {
+		this.lives--;
 
 	}
 	public void psychologicalWarfare(){
