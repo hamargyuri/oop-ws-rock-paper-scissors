@@ -19,4 +19,9 @@ public class MisiMagenheimRPSPlayer extends RockPaperScissorsPlayer {
     public void decreaseLives() {
     this.lives --;
     }
+
+    @Override
+    public String getName() {
+        return "MisiMagenheim";
+    }
 }

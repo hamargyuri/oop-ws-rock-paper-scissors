@@ -1,4 +1,4 @@
-package players;
+package players.*;
 
 public abstract class RockPaperScissorsPlayer {
     protected Integer lives = 3;
