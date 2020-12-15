@@ -5,16 +5,18 @@ public class IZsolt extends RockPaperScissorsPlayer{
 
     @Override
     public Integer getLives() {
-        return lives;
+        return this.lives;
     }
 
     @Override
     public String showHand() {
-        return ;
+        String[] possibleHands = new String[]{"rock","paper","scissors"};
+        int index=(int)(Math.random()* possibleHands.length);
+        return possibleHands[index];
     }
 
     @Override
     public void decreaseLives() {
-    lives--;
+    this.lives--;
     }
 }

@@ -12,21 +12,17 @@ public class GeriSzaszRPSPlayer extends RockPaperScissorsPlayer {
     public String showHand() {
         Random randomGenerator = new Random();
         int randomNumber = randomGenerator.nextInt(3);
-        String hand = "";
 
         switch(randomNumber)  {
             case 0:
-                hand = "rock";
-                break;
+                return "rock";
             case 1:
-                hand = "paper";
-                break;
+                return "paper";
             case 2:
-                hand = "scissors";
-                break;
+                return  "scissors";
+            default:
+                return null;
         }
-
-        return hand;
     }
 
     @Override
@@ -34,4 +30,8 @@ public class GeriSzaszRPSPlayer extends RockPaperScissorsPlayer {
         return this.lives;
     }
 
+    @Override
+    public String getName() {
+        return "Szász Geri";
+    }
 }
