@@ -8,9 +8,10 @@ public class hntsPlayer extends RockPaperScissorsPlayer {
     private float[][] markovChain;
     private int lastMove;
     private int[] previousRounds;
+    private int moveBeforeLast;
 
 
-    hntsPlayer(){
+   public hntsPlayer(){
         markovChain = new float[][] {{0.33f, 0.33f, 0.33f}, {0.33f, 0.33f, 0.33f}, {0.33f, 0.33f, 0.33f}};
         previousRounds = new int[] {0, 0, 0};
     }
@@ -24,12 +25,35 @@ public class hntsPlayer extends RockPaperScissorsPlayer {
     @Override
     public String showHand() {
 
+
         if (firstRoundRandom < 1) {
             int [] options = new int[]{0, 1, 2};
             Random lastMovePlaceHolder = new Random(2);
             lastMove = options[lastMovePlaceHolder.nextInt() -1];
             firstRoundRandom++;
-        } // else lastMove is the numerical value of the other player's last choice
+        } /* else {
+            moveBeforeLast = lastMove;
+            if (opponentMove.equals("rock")) {
+                lastMove = 0;
+            } else if (opponentMove.equals("paper")) {
+                lastMove = 1;
+            } else {
+                lastMove = 2;
+            }
+
+            for(int i = 0; i < 3; i++){
+                markovChain[moveBeforeLast][i] *= previousRounds[moveBeforeLast];
+            }
+
+            markovChain[moveBeforeLast][lastMove] += 1;
+
+            previousRounds[moveBeforeLast]++;
+
+            for(int j = 0; j < 3; j++){
+                markovChain[moveBeforeLast][j] /= previousRounds[moveBeforeLast];
+            }
+        }
+        */
 
         Random random = new Random();
         float ranFloat = random.nextFloat();
@@ -41,12 +65,20 @@ public class hntsPlayer extends RockPaperScissorsPlayer {
             return "rock";
 
         }
+
+
     }
 
         @Override
     public void decreaseLives() {
         this.lives--;
 
+    }
+
+
+
+    public String getName() {
+        return " no name has been specified UwU ";
     }
 
 }
