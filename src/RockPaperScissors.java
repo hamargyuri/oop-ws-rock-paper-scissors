@@ -11,6 +11,9 @@ public class RockPaperScissors {
     private static RockPaperScissorsPlayer player2;
     public static void main(String[] args) {
         initPlay(new Zoly(), new Marci());
+        play();
+        System.out.println(player1.getLives()); //
+        System.out.println(player2.getLives()); //
     }
 
     public static void initPlay(RockPaperScissorsPlayer p1, RockPaperScissorsPlayer p2){
@@ -27,6 +30,17 @@ public class RockPaperScissors {
         } else {
             player2.decreaseLives();
             player1.decreaseLives();
+        }
+    }
+
+    public static void play() {
+        while(player1.getLives() != 0 && player1.getLives() != 0){
+            turn();
+        };
+        if (player1.getLives() == 0 && player2.getLives() == 0) {
+            System.out.println("draw");
+        } else if (player1.getLives() == 0) {System.out.println("player 2 won");
+        } else if (player2.getLives() == 0) {System.out.println("player 1 won");
         }
     }
 }

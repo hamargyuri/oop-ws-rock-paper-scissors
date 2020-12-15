@@ -29,7 +29,7 @@ public class Zoly extends RockPaperScissorsPlayer {
 		System.out.println(psychologicalWarfare);
 	}
 
-	@Override
+
 	public String getName() {
 		return "Z-oly";
 	}
