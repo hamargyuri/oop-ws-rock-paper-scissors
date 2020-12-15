@@ -20,7 +20,7 @@ public class AdamTeboldRPSPlayer extends RockPaperScissorsPlayer {
             case 1:
                 return "paper";
             default:
-                return "scissor";
+                return "scissors";
         }
     }
 
