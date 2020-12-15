@@ -1,6 +1,6 @@
 package players;
 
-public class AntiRPSPlayer extends RockPaperScissorsPlay {
+public class AntiRPSPlayer extends RockPaperScissorsPlayer {
 
     public Integer getLives () {
         return this.lives;
