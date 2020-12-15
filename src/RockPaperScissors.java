@@ -5,9 +5,10 @@ import java.util.List;
 
 public class RockPaperScissors {
 
-    public static List<RockPaperScissorsPlayer> players = new ArrayList<>(){{
+    public static List<RockPaperScissorsPlayer> players = new ArrayList<>();
+
+    public static void main(String[] args) {
         players.add(new AdamTeboldRPSPlayer());
-        players.add(new AndrasVasmaticsRPSPlayer());
         players.add(new BalazsAI());
         players.add(new BenceAI());
         players.add(new ErikRPSPlayer());
@@ -16,9 +17,7 @@ public class RockPaperScissors {
         players.add(new IZsolt());
         players.add(new JanosRPSPlayer());
         players.add(new KMarcellRPSPlayer());
-        players.add(new LaciRPSPlayer());
         players.add(new Marci());
-        players.add(new MisiMagenheimRPSPlayer());
         players.add(new NorbiRPSPlayer());
         players.add(new PJanosRPSPlayer());
         players.add(new SzabiRPSPlayer());
@@ -26,9 +25,9 @@ public class RockPaperScissors {
         players.add(new Zoly());
         players.add(new ZsofiSzakalRPSPlayer());
         players.add(new ZsoltNemethRPSPlayer());
-    }};
 
-    public static void main(String[] args) {
+
+
         for (int i = 0; i < players.size(); i++){
             RockPaperScissorsPlayer player1 = players.get(i);
             for (int j = 0; j < players.size(); j++){
