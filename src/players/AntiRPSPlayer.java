@@ -1,6 +1,6 @@
 package players;
 
-pucblic class AntiRPSPlayer extends RockPaperScissorsPlayers {
+public class AntiRPSPlayer extends RockPaperScissorsPlay {
 
     public Integer getLives () {
         return this.lives;
@@ -8,7 +8,7 @@ pucblic class AntiRPSPlayer extends RockPaperScissorsPlayers {
 
     public String showHand() {
         String[] possibleHands = new String[] {"rock", "paper", "scissors"};
-        Random ranom = new Random();
+        Random random = new Random();
         int rps = random.nextInt(3);
         String showHand = switch (rps) {
             case 0:
