@@ -20,7 +20,7 @@ public class BalazsRockPaperScissors{
         game.addPlayer(new NorbiRPSPlayer());
         game.addPlayer(new PJanosPlayer());
         game.addPlayer(new SzabiRPSPlayer());
-        game.addPlayer(new Zemen());
+        //game.addPlayer(new Zemen());
         game.addPlayer(new Zoly());
         game.addPlayer(new ZsofiSzakalRPSPlayer());
         game.addPlayer(new ZsoltNemethRPSPlayer());
