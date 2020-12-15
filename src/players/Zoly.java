@@ -1,15 +1,14 @@
 package players;
 
-import java.util.Random;
 
 public class Zoly extends RockPaperScissorsPlayer {
+	protected Integer lives = 3;
+	private String[] insults ={"Asshole!", "Bastard!", "Bitch!", "Cunt!", "Prick!"};
+	private String[] hands = {"rock", "paper", "scissors"};
 
-	String[] insults ={"Asshole!", "Bastard!", "Bitch!", "Cunt!"};
-
-	String[] hands = {"rock", "paper", "scissors"};
 	@Override
 	public Integer getLives() {
-		return 3;
+		return this.lives;
 	}
 
 	@Override
@@ -20,12 +19,18 @@ public class Zoly extends RockPaperScissorsPlayer {
 
 	@Override
 	public void decreaseLives() {
+		this.lives--;
 
 	}
-	public void psychologicalWarfare(){
+	private void psychologicalWarfare(){
 		String psychologicalWarfare = "I will show you a ";
 		psychologicalWarfare += hands[(int) (3*Math.random())] + ". ";
-		psychologicalWarfare += insults[(int) (4*Math.random())] + " ";
+		psychologicalWarfare += insults[(int) (5*Math.random())] + " ";
 		System.out.println(psychologicalWarfare);
+	}
+
+	@Override
+	public String getName() {
+		return "Z-oly";
 	}
 }
