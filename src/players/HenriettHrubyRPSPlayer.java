@@ -24,4 +24,9 @@ public class HenriettHrubyRPSPlayer extends RockPaperScissorsPlayer {
 
     @Override
     public void decreaseLives() { this.lives--; }
+
+    @Override
+    public String getName() {
+        return "Hruby Henriett";
+    }
 }

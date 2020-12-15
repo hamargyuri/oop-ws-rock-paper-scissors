@@ -16,4 +16,9 @@ public class Marci extends RockPaperScissorsPlayer {
     public void decreaseLives() {
       this.lives--;
     }
+
+    @Override
+    public String getName() {
+        return "Marcell Gabor";
+    }
 }
