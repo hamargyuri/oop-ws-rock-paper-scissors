@@ -1,7 +1,7 @@
 package players;
 
 public abstract class RockPaperScissorsPlayer {
-    protected final Integer lives = 3;
+    protected Integer lives = 3;
 
     public abstract Integer getLives(); // starts from 3, lives decrease by one if a round is lost
     public abstract String showHand(); // should return "rock" / "paper" / "scissors"
