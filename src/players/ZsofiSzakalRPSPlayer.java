@@ -22,4 +22,8 @@ public class ZsofiSzakalRPSPlayer extends RockPaperScissorsPlayer {
         this.lives--;
 
     }
+    @Override
+    public String getName() {
+        return "Zsofi Szakal";
+    }
 }
