@@ -23,9 +23,14 @@ public class BenceAI extends RockPaperScissorsPlayer {
         }
     }
 
-
     @Override
     public void decreaseLives() {
         this.lives--;
     }
+
+    @Override
+    public String getName() {
+        return "Mozes Bence Botond";
+    }
 }
+
