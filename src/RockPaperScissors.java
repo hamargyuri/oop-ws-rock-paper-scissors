@@ -38,8 +38,7 @@ public class RockPaperScissors {
                     player2.decreaseLives();
                 }
             }
-
-
+            
 //            switch (player1Hand) {
 //                case "rock":
 //                    if (player2Hand.equals("paper")) {
