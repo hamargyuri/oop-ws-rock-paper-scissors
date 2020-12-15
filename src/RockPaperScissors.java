@@ -1,10 +1,9 @@
-import players.AdamTeboldRPSPlayer;
-import players.BenceAI;
-import players.RockPaperScissorsPlayer;
+import players.*;
 
 public class RockPaperScissors {
+
     public static void main(String[] args) {
-        play(new BenceAI(), new AdamTeboldRPSPlayer());
+        play(new Zemen(), new AdamTeboldRPSPlayer());
     }
 
     public static void play(RockPaperScissorsPlayer player1, RockPaperScissorsPlayer player2) {
@@ -19,26 +18,51 @@ public class RockPaperScissors {
         String player2Hand = player2.showHand().toLowerCase();
 
         while (player1.getLives() > 0 && player2.getLives() > 0) {
-            switch (player1Hand) {
-                case "rock":
-                    if (player2Hand.equals("paper")) {
-                        player1.decreaseLives();
-                    } else if (player2Hand.equals("scissors")) {
-                        player2.decreaseLives();
-                    }
-                case "paper":
-                    if (player2Hand.equals("rock")) {
-                        player2.decreaseLives();
-                    } else if (player2Hand.equals("scissors")) {
-                        player1.decreaseLives();
-                    }
-                case "scissors":
-                    if (player2Hand.equals("rock")) {
-                        player2.decreaseLives();
-                    } else if (player2Hand.equals("paper")) {
-                        player2.decreaseLives();
-                    }
+
+            if (player1Hand.equals("rock")) {
+                if (player2Hand.equals("paper")) {
+                    player1.decreaseLives();
+                } else if (player2Hand.equals("scissors")) {
+                    player2.decreaseLives();
+                }
+            } else if (player1Hand.equals("paper")) {
+                if (player2Hand.equals("rock")) {
+                    player2.decreaseLives();
+                } else if (player2Hand.equals("scissors")) {
+                    player1.decreaseLives();
+                }
+            } else if (player1Hand.equals("scissors")) {
+                if (player2Hand.equals("rock")) {
+                    player1.decreaseLives();
+                } else if (player2Hand.equals("paper")) {
+                    player2.decreaseLives();
+                }
             }
+
+
+//            switch (player1Hand) {
+//                case "rock":
+//                    if (player2Hand.equals("paper")) {
+//                        player1.decreaseLives();
+//                    } else if (player2Hand.equals("scissors")) {
+//                        player2.decreaseLives();
+//                    }
+//                    break;
+//                case "paper":
+//                    if (player2Hand.equals("rock")) {
+//                        player2.decreaseLives();
+//                    } else if (player2Hand.equals("scissors")) {
+//                        player1.decreaseLives();
+//                    }
+//                    break;
+//                case "scissors":
+//                    if (player2Hand.equals("rock")) {
+//                        player1.decreaseLives();
+//                    } else if (player2Hand.equals("paper")) {
+//                        player2.decreaseLives();
+//                    }
+//                    break;
+//            }
         }
     }
 }

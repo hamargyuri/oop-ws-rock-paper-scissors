@@ -15,7 +15,7 @@ public class BenceAI extends RockPaperScissorsPlayer {
 
          switch (randomNumber) {
             case 0:
-                return "scissor";
+                return "scissors";
             case 1:
                 return "rock";
             default:
