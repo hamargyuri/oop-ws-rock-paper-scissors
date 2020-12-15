@@ -6,7 +6,7 @@ public class BalazsRockPaperScissors{
 
         game.addPlayer(new AdamTeboldRPSPlayer());
         game.addPlayer(new AndrasVasmaticsRPSPlayer());
-        game.addPlayer(new AntiRPSPlayer());
+        //game.addPlayer(new AntiRPSPlayer());
         game.addPlayer(new BalazsAI());
         game.addPlayer(new BenceAI());
         game.addPlayer(new ErikRPSPlayer());
