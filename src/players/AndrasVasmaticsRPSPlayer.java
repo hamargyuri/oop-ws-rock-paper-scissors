@@ -20,4 +20,9 @@ public class AndrasVasmaticsRPSPlayer extends RockPaperScissorsPlayer {
     public void decreaseLives() {
         this.lives--;
     }
+
+    @Override
+    public String getName() {
+        return "Vasmacska";
+    }
 }

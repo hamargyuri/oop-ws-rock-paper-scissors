@@ -30,4 +30,8 @@ public class GeriSzaszRPSPlayer extends RockPaperScissorsPlayer {
         return this.lives;
     }
 
+    @Override
+    public String getName() {
+        return "Szász Geri";
+    }
 }
