@@ -24,4 +24,9 @@ pucblic class AntiRPSPlayer extends RockPaperScissorsPlayers {
     public void decreaseLives() {
         this.lives--;
     }
+
+    @Override
+    public String getName() {
+        return "Anti"
+    }
 }
