@@ -20,6 +20,11 @@ public class BalazsAI extends RockPaperScissorsPlayer{
         this.lives--;
     }
 
+    @Override
+    public String getName(){
+        return "Csanadi Balazs";
+    }
+
     private String randomHand(){
         int i = (int) (Math.random() * 3);
 
