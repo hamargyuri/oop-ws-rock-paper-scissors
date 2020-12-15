@@ -9,10 +9,9 @@ public class RockPaperScissors {
     }
 
     private static void play(JanosRPSPlayer player1, AdamTeboldRPSPlayer player2) {
-        String hand1 = player1.showHand();
-        String hand2 = player2.showHand();
-
-        while (player1.getLives() <= 0 || player2.getLives() <= 0) {
+        while (player1.getLives() > 0 || player2.getLives() > 0) {
+            String hand1 = player1.showHand();
+            String hand2 = player2.showHand();
             switch (hand1) {
                 case "rock": {
                     if (hand2.equals("paper")) {
