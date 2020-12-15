@@ -2,7 +2,7 @@ package players;
 
 import java.util.Random;
 
-public class PJanosPlayer extends RockPaperScissorsPlayer{
+public class PJanosRPSPlayer extends RockPaperScissorsPlayer{
     @Override
     public Integer getLives() {
         return this.lives;
@@ -22,6 +22,11 @@ public class PJanosPlayer extends RockPaperScissorsPlayer{
     @Override
     public void decreaseLives() {
         this.lives--;
+    }
+
+    @Override
+    public String getName(){
+        return "Patyi János";
     }
 
 }
