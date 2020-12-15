@@ -42,10 +42,10 @@ public class Main {
         }
 
         if (player1.getLives() == 0) {
-            System.out.println(player1.getClass() + " has won against " + player1.getClass());
+            System.out.println(player2.getClass() + " has won against " + player1.getClass());
             return player2;
         } else {
-            System.out.println(player2.getClass() + " has won against " + player2.getClass());
+            System.out.println(player1.getClass() + " has won against " + player2.getClass());
             return player1;
         }
     }
