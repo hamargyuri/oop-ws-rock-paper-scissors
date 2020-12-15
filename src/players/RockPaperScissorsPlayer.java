@@ -1,7 +1,7 @@
 package players;
 
 public abstract class RockPaperScissorsPlayer {
-    protected Integer lives = 3;
+    protected Integer lives = 100;
 
     public abstract Integer getLives(); // starts from 3, lives decrease by one if a round is lost
 
