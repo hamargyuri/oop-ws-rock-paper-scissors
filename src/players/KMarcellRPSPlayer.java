@@ -15,7 +15,6 @@ public class KMarcellRPSPlayer extends RockPaperScissorsPlayer{
         String[] aiRespond = {"rock","paper","sciccors"};
         int randomMove = new Random().nextInt((aiRespond.length));
         String aismove = aiRespond[randomMove];
-        System.out.println(aismove);
 
         return aismove;
     }
