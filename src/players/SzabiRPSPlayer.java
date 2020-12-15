@@ -13,4 +13,9 @@ public class SzabiRPSPlayer extends RockPaperScissorsPlayer {
 
     @Override
     public void decreaseLives() { this.lives--; }
+
+    @Override
+    public String getName() {
+        return "Szabi";
+    }
 }
