@@ -9,6 +9,7 @@ public class ZsoltNemethRPSPlayer extends RockPaperScissorsPlayer {
     public ZsoltNemethRPSPlayer() {
         this.lives = getLives();
         String showZsoltHand = showHand();
+        String name =" Németh Zsolt";
     }
 
     public Integer getLives() {
