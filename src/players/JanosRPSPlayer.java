@@ -16,4 +16,9 @@ public class JanosRPSPlayer extends RockPaperScissorsPlayer {
     public void decreaseLives() {
         this.lives--;
     }
+
+    @Override
+    public String getName() {
+        return "Biro Janos";
+    }
 }
