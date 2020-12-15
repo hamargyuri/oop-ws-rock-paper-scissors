@@ -1,19 +1,18 @@
-import players.JanosRPSPlayer;
-import players.KMarcellRPSPlayer;
-import players.NorbiRPSPlayer;
+import players.*;
 
 public class RockPaperScissors {
     public static void main(String[] args) {
         System.out.println("This is a real combat!");
-        play(new JanosRPSPlayer(), new KMarcellRPSPlayer());
+        play(new JanosRPSPlayer(), new AdamTeboldRPSPlayer());
 
 
     }
 
-    private static void play(JanosRPSPlayer player1, KMarcellRPSPlayer player2) {
+    private static void play(JanosRPSPlayer player1, AdamTeboldRPSPlayer player2) {
         String hand1 = player1.showHand();
         String hand2 = player2.showHand();
-        while (player1.getLives() > 0 || player2.getLives() > 0) {
+
+        while (player1.getLives() <= 0 || player2.getLives() <= 0) {
             switch (hand1) {
                 case "rock": {
                     if (hand2.equals("paper")) {
@@ -42,6 +41,7 @@ public class RockPaperScissors {
                     break;
             }
         }
+
         if (player1.getLives() == 0) System.out.println("Win " + player2.getName());
         else System.out.println("Win " + player1.getName());
     }
