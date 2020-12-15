@@ -18,4 +18,8 @@ public class LaciRPSPlayer extends RockPaperScissorsPlayer {
     public void decreaseLives() {
         this.lives--;
     }
+    @Override
+    public String getName() {
+        return "Csabányi Laci";
+    }
 }
